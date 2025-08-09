@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import Navbar from "./Components/Navbar";
 import { Route, Routes } from "react-router-dom";
 import Home from "./Pages/Publicpages/Home";
-import Contact from "./Pages/Publicpages/Contact";
+import Contact from "./Pages/Publicpages/Contact/Contact";
 import Explore from "./Pages/Publicpages/Explore";
 import Login from "./Pages/Publicpages/Login";
 import About from "./Pages/Publicpages/About";
