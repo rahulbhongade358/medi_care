@@ -4,7 +4,7 @@ import Facebook from "./../../assets/Doctors/Footer logo/facebook.png";
 import Instagram from "./../../assets/Doctors/Footer logo/instagram.png";
 import Linkedin from "./../../assets/Doctors/Footer logo/linkedin.png";
 import Twitter from "./../../assets/Doctors/Footer logo/twitter.png";
-import Youtube from "./../../assets/Doctors/Footer logo/Youtube.png";
+import Youtube from "./../../assets/Doctors/Footer logo/youtube.png";
 const Footer = () => {
   return (
     <div className="h-full  bg-[#0D47A1] text-white">
