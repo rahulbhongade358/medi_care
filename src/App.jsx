@@ -1,12 +1,12 @@
 import React, { useContext } from "react";
 import Navbar from "./Components/Navbar";
 import { Route, Routes } from "react-router-dom";
-import Home from "./Pages/Public/Home";
-import Contact from "./Pages/Public/Contact";
-import Explore from "./Pages/Public/Explore";
-import Login from "./Pages/Public/Login";
-import About from "./Pages/Public/About";
-import SignUp from "./Pages/Public/SignUp";
+import Home from "./Pages/Publicpages/Home";
+import Contact from "./Pages/Publicpages/Contact";
+import Explore from "./Pages/Publicpages/Explore";
+import Login from "./Pages/Publicpages/Login";
+import About from "./Pages/Publicpages/About";
+import SignUp from "./Pages/Publicpages/SignUp";
 import DoctorDashboard from "./Pages/Doctor/DoctorDashboard";
 import NurseDashboard from "./Pages/Nurse/NurseDashboard";
 import PatientDashboard from "./Pages/Patient/PatientDashboard";

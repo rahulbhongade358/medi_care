@@ -1,6 +1,5 @@
 import React from "react";
 import { Expertscard, WhyChooseCard } from "../../Components/Cardsmap/Cardmap";
-import Footer from "./../../Components/Footer/Footer";
 import logo2 from "./../../assets/Doctors/logo3.jpeg";
 const About = () => {
   return (
