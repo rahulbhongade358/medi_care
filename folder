@@ -1,0 +1,97 @@
+; /hospital-app
+; │
+; ├── /public
+; │   └── index.html
+; │
+; ├── /src
+; │   ├── /assets
+; │   │   └── (images, logos, icons)
+; │
+; │   ├── /components
+; │   │   ├── Navbar.jsx
+; │   │   ├── Footer.jsx
+; │   │   ├── ProtectedRoute.jsx
+; │   │   └── RoleBasedRoute.jsx
+; │
+; │   ├── /context
+; │   │   └── AuthContext.jsx        // For login, user, role management
+; │
+; │   ├── /pages
+; │   │   ├── /Public
+; │   │   │   ├── Home.jsx
+; │   │   │   ├── About.jsx
+; │   │   │   ├── Contact.jsx
+; │   │   │   ├── Login.jsx
+; │   │   │   └── SignUp.jsx
+; │   │   │
+; │   │   ├── /Doctor
+; │   │   │   ├── DoctorDashboard.jsx
+; │   │   │   ├── AddDiagnosis.jsx
+; │   │   │   ├── SearchPatients.jsx
+; │   │   │   ├── MyPatients.jsx
+; │   │   │   └── DoctorProfile.jsx
+; │   │   │
+; │   │   ├── /Nurse
+; │   │   │   ├── NurseDashboard.jsx
+; │   │   │   └── ViewPatients.jsx
+; │   │   │
+; │   │   └── /Patient
+; │   │       ├── PatientDashboard.jsx
+; │   │       └── ViewMyRecord.jsx
+; │
+; │   ├── /services
+; │   │   ├── api.js                 // Axios instance setup
+; │   │   └── auth.js                // Login/logout/register API calls
+; │
+; │   ├── /utils
+; │   │   ├── roleUtils.js           // Helpers like isDoctor(), isNurse() etc.
+; │   │   └── formValidators.js
+; │
+; │   ├── App.js
+; │   ├── Routes.js                 // All route setup (public + protected)
+; │   └── index.js
+; │
+; ├── .env
+; ├── package.json
+; └── README.md
+
+
+; /src
+; │
+; ├── /components
+; │   ├── Navbar.js
+; │   ├── Footer.js
+; │   ├── ProtectedRoute.js        ← To protect private routes
+; │   └── RoleBasedRoute.js        ← Optional: role-specific protection
+; │
+; ├── /pages
+; │   ├── Home.js
+; │   ├── About.js
+; │   ├── Contact.js
+; │   ├── Login.js
+; │   ├── Signup.js
+; │
+; │   ├── /doctor
+; │   │   ├── DoctorDashboard.js
+; │   │   ├── AddDiagnosis.js
+; │   │   ├── SearchPatients.js
+; │   │   ├── ViewPatients.js
+; │   │   └── DoctorProfile.js
+; │   │
+; │   ├── /nurse
+; │   │   ├── NurseDashboard.js
+; │   │   └── ViewPatients.js
+; │   │
+; │   ├── /patient
+; │   │   ├── PatientDashboard.js
+; │   │   └── ViewMyRecords.js
+; │
+; ├── /context
+; │   └── AuthContext.js        ← Store login status and user role
+; │
+; ├── /services
+; │   └── auth.js               ← Login/Signup functions (dummy for now)
+; │
+; ├── App.js                   ← Routing will be added here
+; ├── index.js
+; └── main.css / index.css
