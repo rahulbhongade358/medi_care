@@ -1,10 +1,11 @@
 import React from "react";
+import DocNavbar from "../../Components/DocNavbar/DocNavbar";
 
 const DoctorProfile = () => {
   return (
-    <div>
-      <h1>Doctor Profile</h1>
-    </div>
+    <>
+      <DocNavbar/>
+    </>
   );
 };
 

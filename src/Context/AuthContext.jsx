@@ -10,7 +10,7 @@ export const AuthProvider = ({ children }) => {
   });
 
   const Login = (loginData) => {
-    setUser(loginData); // set all at once
+    setUser(loginData);
     console.log("Logged in user:", loginData);
   };
   const isAuthenticated = () => {

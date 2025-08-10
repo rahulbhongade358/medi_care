@@ -1,7 +1,7 @@
 import React from "react";
 import DocNavbar from "../../Components/DocNavbar/DocNavbar";
 
-const MyPatients = () => {
+const SearchPatients = () => {
   return (
     <>
       <DocNavbar />
@@ -9,4 +9,4 @@ const MyPatients = () => {
   );
 };
 
-export default MyPatients;
+export default SearchPatients;

@@ -1,11 +1,12 @@
 import React from "react";
-import Heading from "../../Components/Heading/Heading";
+
+import DocNavbar from "../../Components/DocNavbar/DocNavbar";
 
 const DoctorDashboard = () => {
   return (
-    <div className="bg-gray-50 mt-15">
-      <Heading heading={"🏥Doctor-Dashboard"} />
-    </div>
+    <>
+      <DocNavbar />
+    </>
   );
 };
 

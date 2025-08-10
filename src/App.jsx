@@ -13,8 +13,12 @@ import PatientDashboard from "./Pages/Patient/PatientDashboard";
 import Footer from "./Components/Footer/Footer";
 import { Authcontext } from "./Context/AuthContext";
 import ProtectedRoute from "./Components/ProtectedRoute";
+import SearchPatients from "./Pages/Doctor/SearchPatients";
+import DoctorProfile from "./Pages/Doctor/DoctorProfile";
+import AddDiagnosis from "./Pages/Doctor/AddDiagnosis";
+import MyPatients from "./Pages/Doctor/MyPatients";
+
 const App = () => {
-  const { isAuthenticated } = useContext(Authcontext);
   return (
     <div className="min-h-screen flex flex-col bg-white">
       <Navbar />
@@ -48,7 +52,38 @@ const App = () => {
             </ProtectedRoute>
           }
         />
-
+        <Route
+          path="/searchpatieants"
+          element={
+            <ProtectedRoute>
+              <SearchPatients />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/mypatients"
+          element={
+            <ProtectedRoute>
+              <MyPatients />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/adddiagnosis"
+          element={
+            <ProtectedRoute>
+              <AddDiagnosis />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/doctorprofile"
+          element={
+            <ProtectedRoute>
+              <DoctorProfile />
+            </ProtectedRoute>
+          }
+        />
         <Route path="/signup" element={<SignUp />} />
       </Routes>
       <Footer />
