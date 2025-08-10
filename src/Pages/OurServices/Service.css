@@ -1,55 +1,17 @@
-  @keyframes slideServices {
-    0% {
-      transform: translateX(0%);
-    }
-    13.6% {
-      transform: translateX(0%);
-    }
+@keyframes slideServices {
+  0% { transform: translateX(0%); }
+  20% { transform: translateX(0%); }
 
-    14.9% {
-      transform: translateX(-100%);
-    }
-    28.5% {
-      transform: translateX(-100%);
-    }
+  25% { transform: translateX(-100%); }
+  45% { transform: translateX(-100%); }
 
-    29.8% {
-      transform: translateX(-200%);
-    }
-    43.4% {
-      transform: translateX(-200%);
-    }
+  50% { transform: translateX(-200%); }
+  70% { transform: translateX(-200%); }
 
-    44.7% {
-      transform: translateX(-300%);
-    }
-    58.3% {
-      transform: translateX(-300%);
-    }
+  75% { transform: translateX(-300%); }
+  100% { transform: translateX(-300%); }
+}
 
-    59.6% {
-      transform: translateX(-400%);
-    }
-    73.2% {
-      transform: translateX(-400%);
-    }
-
-    74.5% {
-      transform: translateX(-500%);
-    }
-    88.1% {
-      transform: translateX(-500%);
-    }
-
-    89.4% {
-      transform: translateX(-600%);
-    }
-    100% {
-      transform: translateX(-600%);
-    }
-  }
-
-  .animate-service-slide {
-    animation: slideServices 50s linear alternate;
-  }
-      
+.animate-service-slide {
+  animation: slideServices 30s linear infinite;
+}
