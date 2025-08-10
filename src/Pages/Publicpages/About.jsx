@@ -4,7 +4,7 @@ import logo2 from "./../../assets/Doctors/logo3.jpeg";
 const About = () => {
   return (
     <div>
-      <div className="bg-gray-50 ">
+      <div className="bg-gray-50 mt-15 ">
         <section className="bg-gray-50 py-10 text-center justify-evenly">
           <span className="text-3xl font-bold font-serif text-[#0288D1]">
             🏥 About MediCare - A Smarter Healthcare Platform

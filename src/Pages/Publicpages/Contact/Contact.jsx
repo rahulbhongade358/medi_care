@@ -11,7 +11,7 @@ const Contact = () => {
 
   return (
     <div>
-      <div className=" m-5 p-5 font-serif ">
+      <div className="mt-15 m-5 p-5 font-serif ">
         <span className="text-3xl block text-center font-bold  text-[#0288D1]">
           "We’re Here to Support Your Health and Well-being – Anytime,
           Anywhere."

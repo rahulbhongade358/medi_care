@@ -20,12 +20,12 @@ const Home = () => {
     <div>
       <div
         className=" flex justify-center items-center
-       bg-gradient-to-r from-[#B3E5FC] to-[#B3E5FC]"
+       bg-gradient-to-r from-[#B3E5FC] to-[#B3E5FC] "
       >
         <img
           src={Doctor1}
           alt="Doctors"
-          className="h-[250px] w-full max-w-[600px] "
+          className="h-[250px] w-full max-w-[600px] mt-10 "
         />
       </div>
       <div className="flex justify-center items-center p-4 bg-[#B3E5FC]">

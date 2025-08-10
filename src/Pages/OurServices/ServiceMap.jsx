@@ -8,7 +8,7 @@ const ServiceMap = () => {
     <div className="overflow-hidden w-full">
       <div className="flex animate-service-slide">
         {Servicedata.map((service, i) => (
-          <div key={i} className="min-w-full flex-shrink-0">
+          <div key={i} className="flex-shrink-0 min-w-full ">
             <Servicecard Name={service.Name} Info={service.info} />
           </div>
         ))}
