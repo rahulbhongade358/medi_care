@@ -1,9 +1,10 @@
 import React from "react";
+import Heading from "../../Components/Heading/Heading";
 
 const DoctorDashboard = () => {
   return (
-    <div>
-      <h1>DoctorDashboard</h1>
+    <div className="bg-gray-50 mt-15">
+      <Heading heading={"🏥Doctor-Dashboard"} />
     </div>
   );
 };

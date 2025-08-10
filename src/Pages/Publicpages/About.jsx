@@ -1,14 +1,17 @@
 import React from "react";
 import { Expertscard, WhyChooseCard } from "../../Components/Cardsmap/Cardmap";
 import logo2 from "./../../assets/Doctors/logo3.jpeg";
+import Heading from "../../Components/Heading/Heading";
 const About = () => {
   return (
-    <div>
-      <div className="bg-gray-50 mt-15 ">
-        <section className="bg-gray-50 py-10 text-center justify-evenly">
-          <span className="text-3xl font-bold font-serif text-[#0288D1]">
-            🏥 About MediCare - A Smarter Healthcare Platform
-          </span>
+    <div className="bg-gray-50 mt-15  ">
+      <div>
+        <Heading
+          heading={"🏥 About MediCare - A Smarter Healthcare Platform"}
+        />
+      </div>
+      <div>
+        <section className="bg-gray-50  text-center justify-evenly">
           <div className="text-[20px] text-justify m-5  flex  items-center  font-serif">
             <p>
               Welcome to <span className="font-semibold">MediCare</span> , a

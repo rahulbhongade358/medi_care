@@ -1,5 +1,6 @@
 import React from "react";
 import { useForm } from "react-hook-form";
+import Heading from "../../../Components/Heading/Heading";
 const Contact = () => {
   const {
     register,
@@ -12,10 +13,12 @@ const Contact = () => {
   return (
     <div>
       <div className="mt-15 m-5 p-5 font-serif ">
-        <span className="text-3xl block text-center font-bold  text-[#0288D1]">
-          "We’re Here to Support Your Health and Well-being – Anytime,
-          Anywhere."
-        </span>
+        <div className="text-3xl block text-center font-bold  text-[#0288D1]">
+          <Heading
+            heading={`"We’re Here to Support Your Health and Well-being – Anytime,
+          Anywhere."`}
+          />
+        </div>
         <span className=" block  font-bold text-gray-600">
           Welcome to the Contact Center of Therm X Hospital. Whether you're a
           patient, a medical professional, or a concerned visitor, our team is

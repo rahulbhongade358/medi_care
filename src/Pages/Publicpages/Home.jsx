@@ -15,6 +15,7 @@ import {
   Testimonialcard,
 } from "../../Components/Cardsmap/Cardmap";
 import Service from "../OurServices/Service";
+import Heading from "../../Components/Heading/Heading";
 const Home = () => {
   return (
     <div>
@@ -28,11 +29,14 @@ const Home = () => {
           className="h-[250px] w-full max-w-[600px] mt-10 "
         />
       </div>
-      <div className="flex justify-center items-center p-4 bg-[#B3E5FC]">
-        <h1 className="text-3xl font-bold text-[#0288D1] text-center">
+      <div className="text-3xl  font-bold text-[#0288D1] text-center flex justify-center items-center p-4 bg-[#B3E5FC]">
+        {/* <h1 className="text-3xl font-bold text-[#0288D1] text-center">
           {" "}
           Welcome to MediCare+ — Your Digital Health Companion{" "}
-        </h1>
+        </h1> */}
+        <Heading
+          heading={" Welcome to MediCare+ — Your Digital Health Companion"}
+        />
       </div>
       <div className="flex justify-center items-center p-2 bg-[#B3E5FC] ">
         <h2 className="text-xl text-[#0288D1] text-center">
