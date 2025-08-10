@@ -1,17 +1,23 @@
 @keyframes slideServices {
-  0% { transform: translateX(0%); }
-  20% { transform: translateX(0%); }
+  /* Card 1 */
+  0%   { transform: translateX(0%); }
+  20%  { transform: translateX(0%); }   /* pause 5s */
 
-  25% { transform: translateX(-100%); }
-  45% { transform: translateX(-100%); }
+  /* Card 2 */
+  25%  { transform: translateX(-100%); }
+  45%  { transform: translateX(-100%); } /* pause 5s */
 
-  50% { transform: translateX(-200%); }
-  70% { transform: translateX(-200%); }
+  /* Card 3 */
+  50%  { transform: translateX(-200%); }
+  70%  { transform: translateX(-200%); } /* pause 5s */
 
-  75% { transform: translateX(-300%); }
-  100% { transform: translateX(-300%); }
+  /* Card 4 */
+  75%  { transform: translateX(-300%); }
+  95%  { transform: translateX(-300%); } /* pause 5s */
+
+  100% { transform: translateX(0%); } /* loop back */
 }
 
 .animate-service-slide {
-  animation: slideServices 30s linear infinite;
+  animation: slideServices 20s ease-in-out infinite;
 }

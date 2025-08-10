@@ -11,7 +11,7 @@ const ServiceMap = () => {
           <div
             key={i}
             className="flex-shrink-0 
-              w-full sm:w-1/2 lg:w-1/3 
+              w-full sm:w-1/2 lg:max-w-1/2
               px-2 "
           >
             <Servicecard Name={service.Name} Info={service.info} />
