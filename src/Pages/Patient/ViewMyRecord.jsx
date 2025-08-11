@@ -1,11 +1,13 @@
 import React from "react";
 import Heading from "../../Components/Heading/Heading";
+import PatientNavbar from "../../Components/PatientNavbar/PatientNavbar";
 
 const ViewMyRecord = () => {
   return (
     <>
-      <div className="bg-gray-50 mt-15">
-        <Heading heading={"My-Record"} />
+      <div>
+        <PatientNavbar />
+        <h2>Records</h2>
       </div>
     </>
   );

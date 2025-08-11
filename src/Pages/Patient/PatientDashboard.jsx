@@ -1,11 +1,11 @@
 import React from "react";
-import Heading from "../../Components/Heading/Heading";
+import PatientNavbar from "../../Components/PatientNavbar/PatientNavbar";
 
 const PatientDashboard = () => {
   return (
-    <div className="bg-gray-50 mt-15">
-      <Heading heading={"Patient-Profile"} />
-    </div>
+    <>
+      <PatientNavbar />
+    </>
   );
 };
 
