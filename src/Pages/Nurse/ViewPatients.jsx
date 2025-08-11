@@ -1,11 +1,14 @@
 import React from "react";
+import Heading from "../../Components/Heading/Heading";
 
 const ViewPatients = () => {
   return (
-    <div>
-      <h1>Viewpaitents</h1>
-      <p>For Assinged paitents or total paitents</p>
-    </div>
+    <>
+      <div className="bg-gray-50 mt-15">
+        <Heading heading={"Viewpaitents"} />
+        <p>For Assinged paitents or total paitents</p>
+      </div>
+    </>
   );
 };
 

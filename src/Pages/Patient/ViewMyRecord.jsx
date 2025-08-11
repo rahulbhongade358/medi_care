@@ -1,10 +1,13 @@
 import React from "react";
+import Heading from "../../Components/Heading/Heading";
 
 const ViewMyRecord = () => {
   return (
-    <div>
-      <h1>ViewMyRecord</h1>
-    </div>
+    <>
+      <div className="bg-gray-50 mt-15">
+        <Heading heading={"My-Record"} />
+      </div>
+    </>
   );
 };
 

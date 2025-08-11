@@ -4,7 +4,8 @@ import DocNavbar from "../../Components/DocNavbar/DocNavbar";
 const DoctorProfile = () => {
   return (
     <>
-      <DocNavbar/>
+      <DocNavbar />
+      <h1>Profile</h1>
     </>
   );
 };

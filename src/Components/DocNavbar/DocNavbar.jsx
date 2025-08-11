@@ -8,22 +8,10 @@ const DocNavbar = () => {
 
   return (
     <>
-      <div className="bg-gray-50 mt-15">
+      <div className="bg-gray-50  mt-15 ">
         <Heading heading={"🏥Doctor-Dashboard"} />
       </div>
-      <div>
-        <div>
-          <h1>Current User</h1>
-          {user.username ? (
-            <p>
-              {user.username} ({user.role})
-            </p>
-          ) : (
-            <p>No user logged in</p>
-          )}
-        </div>
-      </div>
-      <div>
+      <div className=" flex flex-col bg-blue-400">
         <div className="hidden md:flex gap-8 text-lg">
           <Link className="hover:text-gray-200" to="/doctorprofile">
             Profile
@@ -37,6 +25,19 @@ const DocNavbar = () => {
           <Link className="hover:text-gray-200" to="/searchpatieants">
             Search
           </Link>
+        </div>
+      </div>
+
+      <div>
+        <div>
+          <h1>Current User</h1>
+          {user.username ? (
+            <p>
+              {user.username} ({user.role})
+            </p>
+          ) : (
+            <p>No user logged in</p>
+          )}
         </div>
       </div>
     </>

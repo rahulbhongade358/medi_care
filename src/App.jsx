@@ -11,12 +11,13 @@ import DoctorDashboard from "./Pages/Doctor/DoctorDashboard";
 import NurseDashboard from "./Pages/Nurse/NurseDashboard";
 import PatientDashboard from "./Pages/Patient/PatientDashboard";
 import Footer from "./Components/Footer/Footer";
-import { Authcontext } from "./Context/AuthContext";
 import ProtectedRoute from "./Components/ProtectedRoute";
 import SearchPatients from "./Pages/Doctor/SearchPatients";
 import DoctorProfile from "./Pages/Doctor/DoctorProfile";
 import AddDiagnosis from "./Pages/Doctor/AddDiagnosis";
 import MyPatients from "./Pages/Doctor/MyPatients";
+import ViewPatients from "./Pages/Nurse/ViewPatients";
+import ViewMyRecord from "./Pages/Patient/ViewMyRecord"
 
 const App = () => {
   return (
@@ -33,22 +34,6 @@ const App = () => {
           element={
             <ProtectedRoute>
               <DoctorDashboard />
-            </ProtectedRoute>
-          }
-        />
-        <Route
-          path="/nursedashboard"
-          element={
-            <ProtectedRoute>
-              <NurseDashboard />
-            </ProtectedRoute>
-          }
-        />
-        <Route
-          path="/patientdashboard"
-          element={
-            <ProtectedRoute>
-              <PatientDashboard />
             </ProtectedRoute>
           }
         />
@@ -84,6 +69,42 @@ const App = () => {
             </ProtectedRoute>
           }
         />
+        <Route
+          path="/nursedashboard"
+          element={
+            <ProtectedRoute>
+              <NurseDashboard />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/viewpatients"
+          element={
+            <ProtectedRoute>
+              <ViewPatients />
+            </ProtectedRoute>
+          }
+        />
+
+        <Route
+          path="/patientdashboard"
+          element={
+            <ProtectedRoute>
+              <PatientDashboard />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/viewmyrecord"
+          element={
+            <ProtectedRoute>
+              <ViewMyRecord />
+            </ProtectedRoute>
+          }
+        />
+        
+        
+
         <Route path="/signup" element={<SignUp />} />
       </Routes>
       <Footer />
