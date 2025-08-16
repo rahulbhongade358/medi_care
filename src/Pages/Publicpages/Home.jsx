@@ -30,10 +30,7 @@ const Home = () => {
         />
       </div>
       <div className="text-3xl  font-bold text-[#0288D1] text-center flex justify-center items-center p-4 bg-[#B3E5FC]">
-        {/* <h1 className="text-3xl font-bold text-[#0288D1] text-center">
-          {" "}
-          Welcome to MediCare+ — Your Digital Health Companion{" "}
-        </h1> */}
+        
         <Heading
           heading={" Welcome to MediCare+ — Your Digital Health Companion"}
         />

@@ -21,7 +21,10 @@ const SignUp = () => {
     <>
       <div className=" mt-15 font-serif bg-[#B3E5FC] text-gray-600 flex flex-col lg:flex-row justify-around items-center px-10 py-6">
         <div>
+          <div className="text-[#0288D1]">
+
           <Heading heading={`Registration Form 📃`} />
+          </div>
           <form onSubmit={handleSubmit(Submit)}>
             <div className="flex flex-row gap-8 text-black mb-5 ">
               <input

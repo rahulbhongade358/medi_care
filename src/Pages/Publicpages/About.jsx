@@ -5,7 +5,7 @@ import Heading from "../../Components/Heading/Heading";
 const About = () => {
   return (
     <div className="bg-gray-50 mt-15  ">
-      <div>
+      <div className="text-[#0288D1]">
         <Heading
           heading={"🏥 About MediCare - A Smarter Healthcare Platform"}
         />

@@ -1,0 +1,26 @@
+{
+  "Users": [
+    {
+      "Id": 1,
+      "name": "Rahul",
+      "Role": "Doctor"
+    },
+    {
+      "Id": 2,
+      "name": "Kunal",
+      "Role": "Nurse"
+    }
+  ],
+  "Patients": [
+    {
+      "Id": 1,
+      "name": "Yash",
+      "Role": "Patients"
+    },
+    {
+      "Id": 2,
+      "name": "Sakshi",
+      "Role": "Patients"
+    }
+  ]
+}

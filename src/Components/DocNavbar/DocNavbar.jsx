@@ -8,29 +8,28 @@ const DocNavbar = () => {
 
   return (
     <>
-      <div className="bg-gray-50  mt-15 ">
+      <div className="w-64 min-h-screen bg-blue-500 text-white flex flex-col p-4  ">
         <Heading heading={"🏥Doctor-Dashboard"} />
-      </div>
-      <div className=" flex flex-col bg-blue-400">
-        <div className="hidden md:flex gap-8 text-lg">
-          <Link className="hover:text-gray-200" to="/doctorprofile">
+        <nav className="mt-6 flex flex-col gap-4 text-lg">
+          <Link className="hover:bg-blue-600 p-2 rounded" to="/doctordashboard">
+            Dashboard
+          </Link>
+          <Link className="hover:bg-blue-600 p-2 rounded" to="/doctorprofile">
             Profile
           </Link>
-          <Link className="hover:text-gray-200" to="/adddiagnosis">
+          <Link className="hover:bg-blue-600 p-2 rounded" to="/adddiagnosis">
             Add-Diagnosis
           </Link>
-          <Link className="hover:text-gray-200" to="/mypatients">
+          <Link className="hover:bg-blue-600 p-2 rounded" to="/mypatients">
             My-Patients
           </Link>
-          <Link className="hover:text-gray-200" to="/searchpatieants">
+          <Link className="hover:bg-blue-600 p-2 rounded" to="/searchpatieants">
             Search
           </Link>
-        </div>
-      </div>
+        </nav>
 
-      <div>
-        <div>
-          <h1>Current User</h1>
+        <div className="mt-auto bg-blue-600 p-3 rounded text-sm">
+          <h1 className="font-semibold">Current User</h1>
           {user.username ? (
             <p>
               {user.username} ({user.role})
