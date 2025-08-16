@@ -57,14 +57,14 @@ const FunCard = () => {
 };
 const Expertscard = () => {
   return (
-    <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-6 px-6">
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 px-4 sm:px-6 md:px-8">
       {Expert.map((exp, i) => (
         <div
           key={i}
-          className="bg-white p-4 pt-0 rounded-4xl h-full
-             transition delay-250 duration-400 ease-in-out 
-             hover:-translate-y-0.5 hover:scale-105 hover:bg-[#e4f4fb]
-             shadow-lg shadow-grey-200/50 text-left space-y-3 flex flex-col"
+          className="bg-white p-4 rounded-3xl h-full
+            transition duration-300 ease-in-out 
+            hover:-translate-y-1 hover:scale-105 hover:bg-[#e4f4fb]
+            shadow-lg text-left flex flex-col space-y-2"
         >
           <ExpertCard
             Name={exp.Name}

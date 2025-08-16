@@ -8,27 +8,27 @@ const DocNavbar = () => {
 
   return (
     <>
-      <div className="w-64 min-h-screen bg-blue-500 text-white flex flex-col p-4  ">
+      <div className="w-55 min-h-screen bg-blue-500 text-white flex flex-col p-4  ">
         <Heading heading={"🏥Doctor-Dashboard"} />
-        <nav className="mt-6 flex flex-col gap-4 text-lg">
+        <nav className=" flex flex-col gap-2 text-lg ">
           <Link className="hover:bg-blue-600 p-2 rounded" to="/doctordashboard">
-            Dashboard
+            🏥 Dashboard
           </Link>
           <Link className="hover:bg-blue-600 p-2 rounded" to="/doctorprofile">
-            Profile
+            👤 Profile
           </Link>
           <Link className="hover:bg-blue-600 p-2 rounded" to="/adddiagnosis">
-            Add-Diagnosis
+            ➕ Add Diagnosis
           </Link>
           <Link className="hover:bg-blue-600 p-2 rounded" to="/mypatients">
-            My-Patients
+            📋 View My Patients
           </Link>
           <Link className="hover:bg-blue-600 p-2 rounded" to="/searchpatieants">
-            Search
+            🔍 Search Patients
           </Link>
         </nav>
 
-        <div className="mt-auto bg-blue-600 p-3 rounded text-sm">
+        <div className="mt-5 bg-blue-600 p-3 rounded text-sm">
           <h1 className="font-semibold">Current User</h1>
           {user.username ? (
             <p>
