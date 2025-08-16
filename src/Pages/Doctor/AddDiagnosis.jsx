@@ -6,8 +6,8 @@ const AddDiagnosis = () => {
     <>
       <div className="flex mt-5">
         <DocNavbar />
-        <div className="flex-1 p-6 mt-5">
-          <h1 className="text-xl font-bold ">➕ Add Diagnosis</h1>
+        <div className="flex-1 p-6 mt-5 text-center">
+          <h1 className="text-xl font-bold ">➕ Diagnosis</h1>
         </div>
       </div>
     </>

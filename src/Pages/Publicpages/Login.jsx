@@ -41,7 +41,7 @@ const Login = () => {
           alt="Login Visual"
         />
 
-        <div className="w-full max-w-[450px] text-center  p-6 rounded-4xl shadow-xl  text-3xl">
+        <div className="w-full max-w-[400px] text-center  p-6 rounded-4xl shadow-xl  text-3xl">
           <h1 className="mb-6">Login Form</h1>
 
           <form
@@ -138,16 +138,6 @@ const Login = () => {
               </Link>
             </p>
           </form>
-        </div>
-        <div>
-          <h1>Current User</h1>
-          {user.username ? (
-            <p>
-              {user.username} ({user.role})
-            </p>
-          ) : (
-            <p>No user logged in</p>
-          )}
         </div>
       </div>
     </>

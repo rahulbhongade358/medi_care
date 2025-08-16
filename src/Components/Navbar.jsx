@@ -5,13 +5,13 @@ import Logo1 from "./../assets/Doctors/logo1.png";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <nav className="fixed top-0 left-0 w-full z-50 bg-[#0288D1] text-white font-serif hover:bg-[#29B6F6]">
+    <nav className="fixed top-0 left-0 w-full z-50 bg-[#0288D1] text-white font-serif hover:bg-[#53c8fe]">
       <div className="flex justify-between items-center px-4 md:px-10 h-[60px]">
         {" "}
         <img
           src={Logo1}
           alt="Logo"
-          className="h-14 w-24 md:h-20 md:w-40 object-contain"
+          className="h-14 w-24 md:h-20 md:w-40 object-cover"
         />
         <div className="hidden md:flex gap-8 text-lg">
           <Link className="hover:text-gray-200" to="/">
