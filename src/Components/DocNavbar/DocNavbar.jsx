@@ -1,44 +1,39 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { Authcontext } from "../../Context/AuthContext";
 import Heading from "../Heading/Heading";
+import { Menu, X } from "lucide-react";
+import medicarelogo from "./../../assets/Doctors/medicarelogo.png";
 
 const DocNavbar = () => {
   const { user } = useContext(Authcontext);
+  const [Isopen, setIsOpen] = useState(false);
 
   return (
     <>
-      <div className="w-55 min-h-screen bg-blue-500 text-white flex flex-col p-4  ">
-        <Heading heading={"🏥Doctor-Dashboard"} />
-        <nav className=" flex flex-col gap-2 text-lg ">
-          <Link className="hover:bg-blue-600 p-2 rounded" to="/doctordashboard">
-            🏥 Dashboard
-          </Link>
-          <Link className="hover:bg-blue-600 p-2 rounded" to="/doctorprofile">
-            👤 Profile
-          </Link>
-          <Link className="hover:bg-blue-600 p-2 rounded" to="/adddiagnosis">
-            ➕ Add Diagnosis
-          </Link>
-          <Link className="hover:bg-blue-600 p-2 rounded" to="/mypatients">
-            📋 View My Patients
-          </Link>
-          <Link className="hover:bg-blue-600 p-2 rounded" to="/searchpatieants">
-            🔍 Search Patients
-          </Link>
-        </nav>
-
-        <div className="mt-5 bg-blue-600 p-3 rounded text-sm">
-          <h1 className="font-semibold">Current User</h1>
-          {user.username ? (
-            <p>
-              {user.username} ({user.role})
-            </p>
-          ) : (
-            <p>No user logged in</p>
-          )}
+      <nav className="shadow-md min-h-screen mt-10 w-60 p-2  bg-blue-600">
+        <div className="border px-3 py-2 flex justify-between items-center">
+          <img src={medicarelogo} className="w-10 rounded-md" />
+          <Menu size={30} className="cursor-pointer" />
         </div>
-      </div>
+        <ul className="px-3 py-5 flex flex-col gap-5 text-lg font-serif cursor-pointer ">
+          <li className="hover:bg-blue-200  rounded-md duration-300">
+            <Link to="/doctordashboard">🏥 Dashboard</Link>
+          </li>
+          <li className="hover:bg-blue-200  rounded-md duration-300">
+            <Link to="/doctorprofile">👤 Profile</Link>
+          </li>
+          <li className="hover:bg-blue-200  rounded-md duration-300">
+            <Link to="/adddiagnosis">➕ Add Diagnosis</Link>
+          </li>
+          <li className="hover:bg-blue-200  rounded-md duration-300">
+            <Link to="/mypatients">📋 View My Patients</Link>
+          </li>
+          <li className="hover:bg-blue-200  rounded-md duration-300">
+            <Link to="/searchpatieants">🔍 Search Patients</Link>
+          </li>
+        </ul>
+      </nav>
     </>
   );
 };
