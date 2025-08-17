@@ -431,6 +431,54 @@ const AddDiagnosis = () => {
                 + Add Medicine
               </button>
             </div>
+            <div className="flex flex-col md:col-span-2">
+              <label className="mb-1 text-black font-serif">
+                Dietary Advice
+              </label>
+              <textarea
+                placeholder="Dietary Advice"
+                {...register("dietaryadvice", { required: true })}
+                rows="2"
+                className="w-full bg-transparent leading-8 border-b border-gray-500 focus:outline-none focus:border-indigo-400 py-3 placeholder-gray-600"
+              ></textarea>
+              {errors.dietaryadvice && (
+                <span className="text-red-600 text-sm mt-1 text-center">
+                  *This field is required*
+                </span>
+              )}
+            </div>
+            <div className="flex flex-col md:col-span-2">
+              <label className="mb-1 text-black font-serif">
+                Lifestyle Advice
+              </label>
+              <textarea
+                placeholder="Lifestyle Advice"
+                {...register("lifestyleadvice", { required: true })}
+                rows="2"
+                className="w-full bg-transparent leading-8 border-b border-gray-500 focus:outline-none focus:border-indigo-400 py-3 placeholder-gray-600"
+              ></textarea>
+              {errors.lifestyleadvice && (
+                <span className="text-red-600 text-sm mt-1 text-center">
+                  *This field is required*
+                </span>
+              )}
+            </div>
+            <div className="flex flex-col ">
+              <label className="mb-1 text-black font-serif">
+                Follow-up Visit
+              </label>
+              <input
+                placeholder="Date of Visit"
+                type="date"
+                {...register("dateofvisit", { required: true })}
+                className="w-full bg-transparent leading-8 border-b border-gray-500 focus:outline-none focus:border-indigo-400 py-3 placeholder-black"
+              />
+              {errors.dateofvisit && (
+                <span className="text-red-600 text-sm mt-1 text-center">
+                  *This field is required*
+                </span>
+              )}
+            </div>
           </form>
         </div>
       </div>
