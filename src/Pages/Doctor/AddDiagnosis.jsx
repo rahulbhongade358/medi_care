@@ -1,14 +1,22 @@
 import React from "react";
 import DocNavbar from "../../Components/DocNavbar/DocNavbar";
-import { useForm } from "react-hook-form";
+import { useForm, useFieldArray } from "react-hook-form";
 
 const AddDiagnosis = () => {
   const {
     register,
     handleSubmit,
+    control,
+    reset,
+    trigger,
+    setError,
     watch,
     formState: { errors },
   } = useForm();
+  const { fields, append, remove } = useFieldArray({
+    control,
+    name: "Users",
+  });
   const Submit = (Data) => console.log(Data);
   return (
     <>
@@ -365,6 +373,63 @@ const AddDiagnosis = () => {
                   </span>
                 )}
               </div>
+            </div>
+            <span className="text-xl font-semibold underline decoration-wavy mb-4 ">
+              {" "}
+              Prescription
+            </span>
+            <ul>
+              {fields.map((item, index) => (
+                <li key={item.id}>
+                  <div className="font-serif text-[18px] flex justify-center">
+                    <span>
+                      Medicine {""}
+                      {index + 1}
+                    </span>
+                  </div>
+                  <div className="flex justify-between gap-3 items-center mb-2.5 p-2 ">
+                    <input
+                      type="text"
+                      {...register(`Users.${index}.medicineName`)}
+                      placeholder="Medicine Name"
+                      className="block w-full  border rounded p-1"
+                    />
+
+                    <input
+                      type="text"
+                      placeholder="Dosage (times/day)"
+                      {...register(`Users.${index}.dosage`)}
+                      className="block  w-full   border rounded p-1"
+                    />
+
+                    <input
+                      type="text"
+                      placeholder="Duration (days)"
+                      {...register(`Users.${index}.duration`)}
+                      className="block  w-full   border rounded p-1"
+                    />
+
+                    <button
+                      type="button"
+                      className="block  w-10 m-1   border rounded p-1 hover:bg-red-300 cursor-pointer"
+                      onClick={() => remove(index)}
+                    >
+                      ❌
+                    </button>
+                  </div>
+                </li>
+              ))}
+            </ul>
+            <div className="flex justify-around">
+              <button
+                type="button"
+                onClick={() =>
+                  append({ medicineName: "", dosage: "", duration: "" })
+                }
+                className="mt-2 px-4 py-2 border rounded-lg hover:bg-blue-300 cursor-pointer"
+              >
+                + Add Medicine
+              </button>
             </div>
           </form>
         </div>
