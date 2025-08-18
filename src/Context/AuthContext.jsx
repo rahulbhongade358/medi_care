@@ -8,6 +8,7 @@ export const AuthProvider = ({ children }) => {
     password: "",
     role: "",
   });
+  const [newPatient, setNewPatient] = useState([]);
 
   const Login = (loginData) => {
     setUser(loginData);
@@ -18,7 +19,16 @@ export const AuthProvider = ({ children }) => {
   };
 
   return (
-    <Authcontext.Provider value={{ user, setUser, Login, isAuthenticated }}>
+    <Authcontext.Provider
+      value={{
+        user,
+        setUser,
+        Login,
+        isAuthenticated,
+        setNewPatient,
+        newPatient,
+      }}
+    >
       {children}
     </Authcontext.Provider>
   );

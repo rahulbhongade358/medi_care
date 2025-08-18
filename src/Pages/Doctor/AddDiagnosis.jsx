@@ -4,6 +4,7 @@ import { useForm, useFieldArray } from "react-hook-form";
 import { Authcontext } from "../../Context/AuthContext";
 
 const AddDiagnosis = () => {
+  const { user, setNewPatient } = useContext(Authcontext);
   const {
     register,
     handleSubmit,
@@ -16,13 +17,14 @@ const AddDiagnosis = () => {
   } = useForm();
   const { fields, append, remove } = useFieldArray({
     control,
-    name: "Users",
+    name: "Prescription",
   });
   const Submit = (Data) => {
-    console.log(Data);
+    console.log(Data.Prescription);
+    console.log("StoredData", Data);
+    setNewPatient((prev) => [...prev, Data]);
     reset();
   };
-  const { user } = useContext(Authcontext);
   return (
     <>
       <div className="flex mt-5">
@@ -110,7 +112,7 @@ const AddDiagnosis = () => {
                   <option value="male">Male</option>
                   <option value="other">Other</option>
                 </select>
-                {errors.gender && (
+                {errors.severity && (
                   <span className="text-red-600 text-sm mt-1 text-center">
                     *This field is required*
                   </span>
@@ -161,11 +163,11 @@ const AddDiagnosis = () => {
                 </label>
                 <textarea
                   placeholder="Add Your Address"
-                  {...register("messagebox", { required: true })}
+                  {...register("addressbox", { required: true })}
                   rows="1"
                   className="w-full bg-transparent leading-8 border-b border-gray-500 focus:outline-none focus:border-indigo-400 py-3 placeholder-black"
                 ></textarea>
-                {errors.messagebox && (
+                {errors.addressbox && (
                   <span className="text-red-600 text-sm mt-1 text-center">
                     *This field is required*
                   </span>
@@ -364,7 +366,7 @@ const AddDiagnosis = () => {
                   Severity Level
                 </label>
                 <select
-                  {...register("gender", { required: true })}
+                  {...register("severity", { required: true })}
                   className="w-full bg-transparent border-b border-gray-500 focus:outline-none py-2 placeholder-black"
                 >
                   <option value="">Select</option>
@@ -372,7 +374,7 @@ const AddDiagnosis = () => {
                   <option value="moderate">Moderate</option>
                   <option value="severe">Severe</option>
                 </select>
-                {errors.gender && (
+                {errors.severity && (
                   <span className="text-red-600 text-sm mt-1 text-center">
                     *This field is required*
                   </span>
@@ -395,7 +397,7 @@ const AddDiagnosis = () => {
                   <div className="flex justify-between gap-3 items-center mb-2.5 p-2 ">
                     <input
                       type="text"
-                      {...register(`Users.${index}.medicineName`)}
+                      {...register(`Prescription.${index}.medicineName`)}
                       placeholder="Medicine Name"
                       className="block w-full  border rounded p-1"
                     />
@@ -403,14 +405,14 @@ const AddDiagnosis = () => {
                     <input
                       type="text"
                       placeholder="Dosage (times/day)"
-                      {...register(`Users.${index}.dosage`)}
+                      {...register(`Prescription.${index}.dosage`)}
                       className="block  w-full   border rounded p-1"
                     />
 
                     <input
                       type="text"
                       placeholder="Duration (days)"
-                      {...register(`Users.${index}.duration`)}
+                      {...register(`Prescription.${index}.duration`)}
                       className="block  w-full   border rounded p-1"
                     />
 
