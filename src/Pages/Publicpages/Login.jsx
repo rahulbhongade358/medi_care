@@ -10,7 +10,7 @@ import { useNavigate } from "react-router-dom";
 
 const Login = () => {
   const [showpassword, setshowPassword] = useState(false);
-  const { Login, user } = useContext(Authcontext);
+  const { Login } = useContext(Authcontext);
   const navigate = useNavigate();
   const {
     register,

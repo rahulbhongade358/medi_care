@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useContext } from "react";
 import DocNavbar from "../../Components/DocNavbar/DocNavbar";
 import { useForm, useFieldArray } from "react-hook-form";
+import { Authcontext } from "../../Context/AuthContext";
 
 const AddDiagnosis = () => {
   const {
@@ -17,7 +18,11 @@ const AddDiagnosis = () => {
     control,
     name: "Users",
   });
-  const Submit = (Data) => console.log(Data);
+  const Submit = (Data) => {
+    console.log(Data);
+    reset();
+  };
+  const { user } = useContext(Authcontext);
   return (
     <>
       <div className="flex mt-5">
@@ -73,7 +78,7 @@ const AddDiagnosis = () => {
                   placeholder="Age"
                   type="number"
                   {...register("age", { required: true })}
-                  className="w-full bg-transparent leading-8 border-b border-gray-500 focus:outline-none focus:border-indigo-400 py-3 placeholder-black"
+                  className="w-full bg-transparent leading-8  border-b border-gray-500 focus:outline-none focus:border-indigo-400 py-3 placeholder-black"
                 />
                 {errors.age && (
                   <span className="text-red-600 text-sm mt-1 text-center">
@@ -140,7 +145,7 @@ const AddDiagnosis = () => {
               <div className="flex flex-col">
                 <input
                   placeholder="Date of Visit"
-                  type="date"
+                  type="datetime-local"
                   {...register("date", { required: true })}
                   className="w-full bg-transparent leading-8 border-b border-gray-500 focus:outline-none focus:border-indigo-400 py-3 placeholder-black"
                 />
@@ -175,7 +180,7 @@ const AddDiagnosis = () => {
             <div className=" p-5 rounded-xl grid grid-cols-1 md:grid-cols-2 gap-6 text-black">
               <div className="flex flex-col md:col-span-2">
                 <label className="mb-1 text-gray-600 font-medium">
-                  Address
+                  Symptoms
                 </label>
                 <textarea
                   placeholder="Presenting Symptoms "
@@ -478,6 +483,53 @@ const AddDiagnosis = () => {
                   *This field is required*
                 </span>
               )}
+            </div>
+            <span className="text-xl font-semibold underline decoration-wavy mb-4 ">
+              {" "}
+              Doctor Remarks Section
+            </span>
+            <div className="flex flex-col md:col-span-2">
+              <label className="mb-1 text-black font-serif">Remarks</label>
+              <textarea
+                placeholder="remark"
+                {...register("remark", { required: true })}
+                rows="2"
+                className="w-full bg-transparent leading-8 border-b border-gray-500 focus:outline-none focus:border-indigo-400 py-3 placeholder-gray-600"
+              ></textarea>
+              {errors.remark && (
+                <span className="text-red-600 text-sm mt-1 text-center">
+                  *This field is required*
+                </span>
+              )}
+            </div>
+            <div className="flex flex-col md:col-span-2">
+              <label className="mb-1 text-black font-serif">Precautions</label>
+              <textarea
+                placeholder="precautions"
+                {...register("remark", { required: true })}
+                rows="2"
+                className="w-full bg-transparent leading-8 border-b border-gray-500 focus:outline-none focus:border-indigo-400 py-3 placeholder-gray-600"
+              ></textarea>
+              {errors.precautions && (
+                <span className="text-red-600 text-sm mt-1 text-center">
+                  *This field is required*
+                </span>
+              )}
+            </div>
+            <div>
+              <input
+                value={`Dr.${user.username}`}
+                readOnly
+                {...register("docname", { required: true })}
+                className="w-fit  bg-transparent leading-8 border-b font-serif text-2xl text-center border-gray-500 focus:outline-none focus:border-indigo-400 py-3 placeholder-black"
+              />
+            </div>
+            <div className="flex justify-center md:col-span-2">
+              <input
+                type="submit"
+                value="Submit"
+                className="bg-blue-500 hover:bg-blue-600 transition-colors duration-200 text-white font-semibold rounded-2xl px-6 py-3 cursor-pointer mt-6 shadow-md"
+              />
             </div>
           </form>
         </div>
