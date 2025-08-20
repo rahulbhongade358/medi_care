@@ -17,7 +17,8 @@ import DoctorProfile from "./Pages/Doctor/DoctorProfile";
 import AddDiagnosis from "./Pages/Doctor/AddDiagnosis";
 import MyPatients from "./Pages/Doctor/MyPatients";
 import ViewPatients from "./Pages/Nurse/ViewPatients";
-import ViewMyRecord from "./Pages/Patient/ViewMyRecord"
+import ViewMyRecord from "./Pages/Patient/ViewMyRecord";
+import Patientallcard from "./Components/Cardsmap/Patientallcard";
 
 const App = () => {
   return (
@@ -102,8 +103,14 @@ const App = () => {
             </ProtectedRoute>
           }
         />
-        
-        
+        <Route
+          path="/patientallcard/:PID"
+          element={
+            <ProtectedRoute>
+              <Patientallcard />
+            </ProtectedRoute>
+          }
+        />
 
         <Route path="/signup" element={<SignUp />} />
       </Routes>

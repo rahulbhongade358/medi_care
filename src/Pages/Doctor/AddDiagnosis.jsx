@@ -112,7 +112,7 @@ const AddDiagnosis = () => {
                   <option value="male">Male</option>
                   <option value="other">Other</option>
                 </select>
-                {errors.severity && (
+                {errors.gender && (
                   <span className="text-red-600 text-sm mt-1 text-center">
                     *This field is required*
                   </span>
@@ -508,7 +508,7 @@ const AddDiagnosis = () => {
               <label className="mb-1 text-black font-serif">Precautions</label>
               <textarea
                 placeholder="precautions"
-                {...register("remark", { required: true })}
+                {...register("precautions", { required: true })}
                 rows="2"
                 className="w-full bg-transparent leading-8 border-b border-gray-500 focus:outline-none focus:border-indigo-400 py-3 placeholder-gray-600"
               ></textarea>
