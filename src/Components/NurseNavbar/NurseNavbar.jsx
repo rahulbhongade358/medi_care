@@ -22,9 +22,9 @@ const NurseNavbar = () => {
       <div>
         <div>
           <h1>Current User</h1>
-          {user.username ? (
+          {user ? (
             <p>
-              {user.username} ({user.role})
+              {user.firstName} ({user.Whoareyou})
             </p>
           ) : (
             <p>No user logged in</p>

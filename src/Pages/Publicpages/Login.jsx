@@ -19,18 +19,7 @@ const Login = () => {
     formState: { errors },
   } = useForm();
   const Submit = (data) => {
-    Login({
-      username: data.username,
-      password: data.password,
-      role: data.role,
-    });
-    if (data.role === "Doctor") {
-      navigate("/doctordashboard");
-    } else if (data.role === "Nurse") {
-      navigate("/nursedashboard");
-    } else {
-      navigate("/patientdashboard");
-    }
+    Login(data);
   };
   return (
     <>

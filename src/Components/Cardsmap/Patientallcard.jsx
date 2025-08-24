@@ -12,55 +12,150 @@ const Patientallcard = () => {
   return (
     <div className="flex mt-5">
       <DocNavbar />
-      <div className="flex-1 p-6 mt-5">
-        <h1 className="text-xl font-bold ">📋 Detailed Info</h1>
-        <div
-          className="border p-2 my-2 rounded"
-          onClick={() => navigate(`/patient-details/${patient.PID}`)}
-        >
-          <p>ID:{patient.PID}</p>
-          <p>
-            Name : {patient.firstName} {patient.middleName} {patient.lastName}
-          </p>
-          <p>Age : {patient.age}</p>
-          <p>Gender : {patient.gender}</p>
-          <p>Contact : {patient.contact}</p>
-          <p>E-mail : {patient.email}</p>
-          <p>Date of Visit : {patient.date}</p>
-          <p>Address : {patient.addressbox}</p>
-          <h3>Symptoms</h3>
-          <p>Symptom : {patient.symptombox}</p>
-          <p>Duration of Symptoms : {patient.durationofsymptoms}</p>
-          <p>Past Medical History : {patient.medicalhistory}</p>
-          <p>Allergies : {patient.Allergies}</p>
-          <p>Family-history : {patient.familyhistory}</p>
-          <p>Current-medications : {patient.currentmedications}</p>
-          <h3>Diagnosis </h3>
-          <p>temperature : {patient.temperature}</p>
-          <p>Pulse-rate : {patient.pulserate}</p>
-          <p>Blood-pressure : {patient.bloodpressure}</p>
-          <p>Oxygen-saturation : {patient.oxygensaturation}</p>
-          <p>Weight : {patient.weight}</p>
-          <p>Diseasename : {patient.diseasename}</p>
-          <p>Test-suggestion : {patient.testsuggestion}</p>
-          <p>Severity : {patient.severity}</p>
+      <div className="flex-1 p-4 sm:p-6 mt-5 sm:flex-1">
+        <h1 className="text-2xl font-bold mb-4">📋 Detailed Info</h1>
 
-          <h4>Prescription :</h4>
-          {patient.Prescription?.map((med, i) => (
-            <div key={i}>
-              <p>
-                🩺 {med.medicineName} - {med.dosage} dosage x {med.duration}{" "}
-                days
-              </p>
-            </div>
-          ))}
-          <p>Dietary-Advice : {patient.dietaryadvice}</p>
-          <p>Lifestyle-Advice : {patient.lifestyleadvice}</p>
-          <p>Follow-up Visit : {patient.dateofvisit}</p>
-          <h3>Doctor Remarks </h3>
-          <p>Remark : {patient.remark}</p>
-          <p>Precautions : {patient.precautions}</p>
-          <p>Doctor : {patient.docname}</p>
+        <div className="border rounded-2xl shadow-md p-4 sm:p-6 bg-white hover:shadow-lg transition">
+          <h2 className="text-lg text-center  font-semibold mb-2">
+            Patient Information
+          </h2>
+          <div className="  grid grid-cols-1 md:grid-cols-2 gap-3">
+            <p>
+              <span className="font-semibold">Name:</span> {patient.firstName}{" "}
+              {patient.middleName} {patient.lastName}
+            </p>
+            <p>
+              <span className="font-semibold">ID:</span> {patient.PID}
+            </p>
+            <p>
+              <span className="font-semibold">Age:</span> {patient.age}
+            </p>
+            <p>
+              <span className="font-semibold">Gender:</span> {patient.gender}
+            </p>
+            <p>
+              <span className="font-semibold">Contact:</span> {patient.contact}
+            </p>
+            <p>
+              <span className="font-semibold">E-mail:</span> {patient.email}
+            </p>
+            <p>
+              <span className="font-semibold">Date of Visit:</span>{" "}
+              {patient.date}
+            </p>
+            <p>
+              <span className="font-semibold">Address:</span>{" "}
+              {patient.addressbox}
+            </p>
+          </div>
+
+          <h2 className="text-lg text-center font-semibold mt-6 mb-2">
+            Symptoms
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+            <p>
+              <span className="font-semibold">Symptom:</span>{" "}
+              {patient.symptombox}
+            </p>
+            <p>
+              <span className="font-semibold">Duration:</span>{" "}
+              {patient.durationofsymptoms}
+            </p>
+            <p>
+              <span className="font-semibold">Past Medical History:</span>{" "}
+              {patient.medicalhistory}
+            </p>
+            <p>
+              <span className="font-semibold">Allergies:</span>{" "}
+              {patient.Allergies}
+            </p>
+            <p>
+              <span className="font-semibold">Family History:</span>{" "}
+              {patient.familyhistory}
+            </p>
+            <p>
+              <span className="font-semibold">Current Medications:</span>{" "}
+              {patient.currentmedications}
+            </p>
+          </div>
+
+          <h2 className="text-lg text-center font-semibold mt-6 mb-2">
+            Diagnosis
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+            <p>
+              <span className="font-semibold">Temperature:</span>{" "}
+              {patient.temperature}
+            </p>
+            <p>
+              <span className="font-semibold">Pulse Rate:</span>{" "}
+              {patient.pulserate}
+            </p>
+            <p>
+              <span className="font-semibold">Blood Pressure:</span>{" "}
+              {patient.bloodpressure}
+            </p>
+            <p>
+              <span className="font-semibold">Oxygen Saturation:</span>{" "}
+              {patient.oxygensaturation}
+            </p>
+            <p>
+              <span className="font-semibold">Weight:</span> {patient.weight}
+            </p>
+            <p>
+              <span className="font-semibold">Disease Name:</span>{" "}
+              {patient.diseasename}
+            </p>
+            <p>
+              <span className="font-semibold">Test Suggestion:</span>{" "}
+              {patient.testsuggestion}
+            </p>
+            <p>
+              <span className="font-semibold">Severity:</span>{" "}
+              {patient.severity}
+            </p>
+          </div>
+          <h2 className="text-lg text-center font-semibold mt-6 mb-2">
+            Prescription
+          </h2>
+          <div className="space-y-2">
+            {patient.Prescription?.map((med, i) => (
+              <div key={i} className="bg-gray-100 rounded-lg p-2">
+                <p>
+                  🩺 <span className="font-semibold">{med.medicineName}</span> -{" "}
+                  {med.dosage} dosage × {med.duration} days
+                </p>
+              </div>
+            ))}
+          </div>
+
+          <p className="mt-3">
+            <span className="font-semibold">Dietary Advice:</span>{" "}
+            {patient.dietaryadvice}
+          </p>
+          <p>
+            <span className="font-semibold">Lifestyle Advice:</span>{" "}
+            {patient.lifestyleadvice}
+          </p>
+          <p>
+            <span className="font-semibold">Follow-up Visit:</span>{" "}
+            {patient.dateofvisit}
+          </p>
+          <h2 className="text-lg text-center font-semibold mt-6 mb-2">
+            Doctor Remarks
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+            <p>
+              <span className="font-semibold">Remark:</span> {patient.remark}
+            </p>
+            <p>
+              <span className="font-semibold">Precautions:</span>{" "}
+              {patient.precautions}
+            </p>
+            <p>
+              <span className="font-semibold">Doctor:</span> {patient.docname}
+            </p>
+          </div>
         </div>
       </div>
     </div>

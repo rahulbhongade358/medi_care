@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useContext } from "react";
 import Login2 from "./../../assets/Doctors/login/Login2.png";
 import { useForm } from "react-hook-form";
 import Heading from "../../Components/Heading/Heading";
+import { Authcontext } from "../../Context/AuthContext";
 
 const SignUp = () => {
   const {
@@ -12,8 +13,10 @@ const SignUp = () => {
     formState: { errors },
   } = useForm();
   const SelectedRole = watch("Whoareyou");
-  const Submit = (data) => {
+  const { NewRegister } = useContext(Authcontext);
+  const submit = (data) => {
     const finalPayload = { ...data, isApproved: false };
+    NewRegister(finalPayload);
     reset();
     console.log(finalPayload);
   };
@@ -22,10 +25,9 @@ const SignUp = () => {
       <div className=" mt-15 font-serif bg-[#B3E5FC] text-gray-600 flex flex-col lg:flex-row justify-around items-center px-10 py-6">
         <div>
           <div className="text-[#0288D1]">
-
-          <Heading heading={`Registration Form 📃`} />
+            <Heading heading={`Registration Form 📃`} />
           </div>
-          <form onSubmit={handleSubmit(Submit)}>
+          <form onSubmit={handleSubmit(submit)}>
             <div className="flex flex-row gap-8 text-black mb-5 ">
               <input
                 placeholder="First Name"
@@ -243,10 +245,10 @@ const SignUp = () => {
                     <input
                       placeholder="Years of Experience"
                       type="text"
-                      {...register("Experience", { required: true })}
+                      {...register("Nurseexperience", { required: true })}
                       className="w-full bg-transparent leading-8 border-b border-gray-500 focus:outline-none focus:border-indigo-400 py-3 placeholder-black"
                     />
-                    {errors.Experience && (
+                    {errors.Nurseexperience && (
                       <span className="text-red-600 text-sm mt-1 text-center">
                         *This field is required*
                       </span>

@@ -1,7 +1,6 @@
 import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { Authcontext } from "../../Context/AuthContext";
-import Heading from "../Heading/Heading";
 import {
   Menu,
   LayoutDashboard,
@@ -37,6 +36,7 @@ const Side_Items = [
 ];
 const DocNavbar = () => {
   const { user } = useContext(Authcontext);
+
   const [Isopen, setIsOpen] = useState(true);
 
   return (
@@ -97,15 +97,14 @@ const DocNavbar = () => {
             className={`leading-5 ${
               !Isopen && "w-0 translate-x-24"
             } duration-500 overflow-hidden`}
-          >
-            {user.username ? (
-              <p className="text-lg">
-                {user.username} ({user.role})
-              </p>
-            ) : (
-              <p>No user logged in</p>
-            )}
-          </div>
+          ></div>
+          {user ? (
+            <p>
+              {user.firstName} ({user.Whoareyou})
+            </p>
+          ) : (
+            <p>No user logged in</p>
+          )}
         </div>
       </nav>
     </>
